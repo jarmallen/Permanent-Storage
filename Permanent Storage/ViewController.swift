@@ -13,6 +13,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // NSUserDefaults.standardUserDefaults().setObject("Jared", forKey: "Name")
+        
+        let userName = NSUserDefaults.standardUserDefaults().objectForKey("Name") as! String
+        
+        print(userName)
+        
+        let array = [1, 2, 3, 4]
+        // NSUserDefaults.standardUserDefaults().setObject(array, forKey: "array")
+        
+        let returnedArray = NSUserDefaults.standardUserDefaults().objectForKey("array") as! NSArray
+        
+        for x in returnedArray {
+            print(x)
+        }
     }
 
     override func didReceiveMemoryWarning() {
